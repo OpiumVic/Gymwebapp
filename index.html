@@ -245,7 +245,8 @@
             <li><span class="check"></span>Free WiFi</li>
             <li><span class="check"></span>All equipment access</li>
           </ul>
-          <a href="#" class="btn btn-outline btn-block">Get Started</a>
+          <a href="#" class="btn btn-outline btn-block plan-select-btn" data-plan="Daily Pass"
+            data-price="Ksh 1,800/day">Get Started</a>
         </div>
         <div class="pricing-card" data-aos>
           <div class="pricing-header">
@@ -264,7 +265,8 @@
             <li><span class="check"></span>All equipment access</li>
             <li><span class="check"></span>Valid student ID required</li>
           </ul>
-          <a href="#" class="btn btn-outline btn-block">Get Started</a>
+          <a href="#" class="btn btn-outline btn-block plan-select-btn" data-plan="Student"
+            data-price="Ksh 4,000/mo">Get Started</a>
         </div>
         <div class="pricing-card featured" data-aos>
           <div class="featured-badge">Most Popular</div>
@@ -284,7 +286,8 @@
             <li><span class="check"></span>All equipment access</li>
             <li><span class="check"></span>Group classes</li>
           </ul>
-          <a href="#" class="btn btn-primary btn-block">Join Now</a>
+          <a href="#" class="btn btn-primary btn-block plan-select-btn" data-plan="Monthly"
+            data-price="Ksh 6,500/mo">Join Now</a>
         </div>
         <div class="pricing-card" data-aos>
           <div class="pricing-header">
@@ -301,7 +304,8 @@
             <li><span class="check"></span>Save vs. monthly rate</li>
             <li><span class="check"></span>Priority class booking</li>
           </ul>
-          <a href="#" class="btn btn-outline btn-block">Get Started</a>
+          <a href="#" class="btn btn-outline btn-block plan-select-btn" data-plan="6 Months" data-price="Ksh 36,000">Get
+            Started</a>
         </div>
         <div class="pricing-card" data-aos>
           <div class="pricing-header">
@@ -319,7 +323,8 @@
             <li><span class="check"></span>Priority class booking</li>
             <li><span class="check"></span>Guest passes (2/mo)</li>
           </ul>
-          <a href="#" class="btn btn-outline btn-block">Go Annual</a>
+          <a href="#" class="btn btn-outline btn-block plan-select-btn" data-plan="12 Months"
+            data-price="Ksh 66,000/yr">Go Annual</a>
         </div>
         <div class="pricing-card" data-aos>
           <div class="pricing-header">
@@ -336,7 +341,8 @@
             <li><span class="check"></span>Group rates for teams</li>
             <li><span class="check"></span>Custom packages available</li>
           </ul>
-          <a href="#" class="btn btn-outline btn-block">Contact Us</a>
+          <a href="#" class="btn btn-outline btn-block plan-select-btn" data-plan="Corporate / Groups"
+            data-price="Ksh 5,500/person">Contact Us</a>
         </div>
       </div>
     </div>
@@ -653,7 +659,6 @@
         <p>Stop waiting. Start building. The hardest step is the first one &mdash; and we'll take it with you.</p>
         <div class="cta-actions">
           <a href="#membership" class="btn btn-primary btn-lg">Join SOSH Today</a>
-          <a href="#book-trainer" class="btn btn-outline btn-lg">Book a Free Trial</a>
         </div>
       </div>
     </div>
@@ -724,6 +729,64 @@
       </div>
     </div>
   </footer>
+
+  <!-- ========== PLAN SIGNUP MODAL ========== -->
+  <div class="modal-overlay" id="planModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-plan-summary">
+        <span class="modal-tag">Selected Plan</span>
+        <h3 class="modal-plan-name" id="modalPlanName">Monthly</h3>
+        <div class="modal-plan-price" id="modalPlanPrice">Ksh 6,500/mo</div>
+      </div>
+      <form class="modal-form" id="planSignupForm">
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="signupPhone">Phone Number</label>
+          <input type="tel" id="signupPhone" placeholder="07XX XXX XXX" required />
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email Address</label>
+          <input type="email" id="signupEmail" placeholder="you@email.com" required />
+        </div>
+        <div class="modal-mpesa">
+          <div class="mpesa-header">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+            <span>M-Pesa Payment Details</span>
+          </div>
+          <div class="mpesa-details">
+            <div class="mpesa-row">
+              <span class="mpesa-label">Paybill Number</span>
+              <span class="mpesa-value" id="mpesaPaybill">522522</span>
+            </div>
+            <div class="mpesa-row">
+              <span class="mpesa-label">Account Number</span>
+              <span class="mpesa-value" id="mpesaAccount">SOSH GYM</span>
+            </div>
+            <div class="mpesa-row">
+              <span class="mpesa-label">Amount</span>
+              <span class="mpesa-value mpesa-amount" id="mpesaAmount">Ksh 6,500</span>
+            </div>
+          </div>
+          <p class="mpesa-note">Send payment via M-Pesa, then submit this form with your details. We'll confirm your
+            membership within 24 hours.</p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Submit &amp; Confirm Membership</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

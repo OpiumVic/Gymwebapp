@@ -1740,3 +1740,194 @@ li.disabled .check::after {
   background: var(--green);
   color: var(--black);
 }
+
+/* ---------- PLAN SIGNUP MODAL ---------- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.modal-overlay.open {
+  display: flex;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal {
+  position: relative;
+  background: var(--dark-2);
+  border: 1px solid var(--dark-3);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 520px;
+  padding: 40px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.modal-close:hover {
+  background: var(--green);
+  color: var(--black);
+  border-color: var(--green);
+}
+
+.modal-plan-summary {
+  text-align: center;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--dark-4);
+}
+
+.modal-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--green);
+  background: var(--green-glow);
+  padding: 4px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+.modal-plan-name {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--white);
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.modal-plan-price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--green);
+}
+
+.modal-form .form-group {
+  margin-bottom: 18px;
+}
+
+.modal-mpesa {
+  background: var(--dark-3);
+  border: 1px solid var(--dark-4);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.mpesa-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.mpesa-header svg {
+  flex-shrink: 0;
+  color: var(--green);
+}
+
+.mpesa-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mpesa-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--dark-2);
+  border-radius: var(--radius-sm);
+}
+
+.mpesa-label {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mpesa-value {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  user-select: all;
+}
+
+.mpesa-amount {
+  color: var(--green);
+  font-size: 1.2rem;
+}
+
+.mpesa-note {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Modal success state */
+.modal-form.modal-success {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 28px 20px;
+  }
+
+  .modal-plan-name {
+    font-size: 1.8rem;
+  }
+
+  .modal-plan-price {
+    font-size: 1.2rem;
+  }
+
+  .mpesa-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

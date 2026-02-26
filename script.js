@@ -85,27 +85,84 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', animateStats);
   animateStats(); // Check on load
 
-  // ---------- PRICING TOGGLE ----------
-  const pricingToggle = document.getElementById('pricingToggle');
-  const toggleLabels = document.querySelectorAll('.toggle-label');
-  const prices = document.querySelectorAll('.price');
-  let isAnnual = false;
+  // ---------- PLAN SIGNUP MODAL ----------
+  const planModal = document.getElementById('planModal');
+  const modalClose = document.getElementById('modalClose');
+  const modalPlanName = document.getElementById('modalPlanName');
+  const modalPlanPrice = document.getElementById('modalPlanPrice');
+  const mpesaAmount = document.getElementById('mpesaAmount');
+  const planSignupForm = document.getElementById('planSignupForm');
+  const planButtons = document.querySelectorAll('.plan-select-btn');
 
-  if (pricingToggle) {
-    pricingToggle.addEventListener('click', () => {
-      isAnnual = !isAnnual;
-      pricingToggle.classList.toggle('active', isAnnual);
+  function openPlanModal(planName, planPrice) {
+    if (!planModal) return;
+    modalPlanName.textContent = planName;
+    modalPlanPrice.textContent = planPrice;
+    // Extract just the Ksh amount for M-Pesa (e.g. "Ksh 6,500/mo" → "Ksh 6,500")
+    const amountOnly = planPrice.replace(/\/.*$/, '');
+    mpesaAmount.textContent = amountOnly;
+    planModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
-      toggleLabels.forEach(label => {
-        const period = label.getAttribute('data-period');
-        label.classList.toggle('active', isAnnual ? period === 'annual' : period === 'monthly');
-      });
+  function closePlanModal() {
+    if (!planModal) return;
+    planModal.classList.remove('open');
+    document.body.style.overflow = '';
+    // Reset form if it was in success state
+    if (planSignupForm && planSignupForm.classList.contains('modal-success')) {
+      planSignupForm.classList.remove('modal-success');
+      planSignupForm.innerHTML = planSignupForm.dataset.originalHtml;
+    }
+  }
 
-      prices.forEach(price => {
-        const monthly = price.getAttribute('data-monthly');
-        const annual = price.getAttribute('data-annual');
-        price.textContent = isAnnual ? annual : monthly;
-      });
+  // Store original form HTML for reset
+  if (planSignupForm) {
+    planSignupForm.dataset.originalHtml = planSignupForm.innerHTML;
+  }
+
+  planButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const plan = btn.getAttribute('data-plan');
+      const price = btn.getAttribute('data-price');
+      openPlanModal(plan, price);
+    });
+  });
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closePlanModal);
+  }
+
+  // Close on overlay click
+  if (planModal) {
+    planModal.addEventListener('click', (e) => {
+      if (e.target === planModal) closePlanModal();
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && planModal && planModal.classList.contains('open')) {
+      closePlanModal();
+    }
+  });
+
+  // Form submission
+  if (planSignupForm) {
+    planSignupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      planSignupForm.classList.add('modal-success');
+      planSignupForm.innerHTML = `
+        <div class="success-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3 class="success-title">Request Submitted!</h3>
+        <p class="success-text">We've received your details for the <strong>${modalPlanName.textContent}</strong> plan.<br/>We'll confirm your membership within 24 hours.</p>
+      `;
     });
   }
 
