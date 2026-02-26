@@ -3,7 +3,9 @@
    ======================================== */
 
 /* ---------- RESET & BASE ---------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -62,7 +64,10 @@ a {
   transition: var(--transition);
 }
 
-ul, ol { list-style: none; }
+ul,
+ol {
+  list-style: none;
+}
 
 .container {
   width: 100%;
@@ -71,7 +76,9 @@ ul, ol { list-style: none; }
   padding: 0 24px;
 }
 
-.accent { color: var(--green); }
+.accent {
+  color: var(--green);
+}
 
 /* ---------- BUTTONS ---------- */
 .btn {
@@ -89,15 +96,28 @@ ul, ol { list-style: none; }
   white-space: nowrap;
 }
 
-.btn-sm { padding: 9px 18px; font-size: 0.7rem; border-radius: var(--radius-sm); }
-.btn-lg { padding: 16px 36px; font-size: 0.9rem; border-radius: var(--radius-md); }
-.btn-block { width: 100%; }
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 0.7rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-block {
+  width: 100%;
+}
 
 .btn-primary {
   background: var(--green);
   color: var(--black);
   border-color: var(--green);
 }
+
 .btn-primary:hover {
   background: transparent;
   color: var(--green);
@@ -109,6 +129,7 @@ ul, ol { list-style: none; }
   color: var(--white);
   border-color: var(--gray-500);
 }
+
 .btn-outline:hover {
   border-color: var(--green);
   color: var(--green);
@@ -245,9 +266,11 @@ ul, ol { list-style: none; }
 .nav-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .nav-toggle.active span:nth-child(2) {
   opacity: 0;
 }
+
 .nav-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -282,12 +305,10 @@ ul, ol { list-style: none; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.6) 50%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.8) 100%);
 }
 
 .hero-content {
@@ -327,9 +348,17 @@ ul, ol { list-style: none; }
   opacity: 0;
 }
 
-.hero-line:nth-child(1) { animation-delay: 0.2s; }
-.hero-line:nth-child(2) { animation-delay: 0.4s; }
-.hero-line:nth-child(3) { animation-delay: 0.6s; }
+.hero-line:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.hero-line:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.hero-line:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 .hero-line.accent {
   color: var(--green);
@@ -364,7 +393,9 @@ ul, ol { list-style: none; }
   opacity: 0;
 }
 
-.stat { text-align: center; }
+.stat {
+  text-align: center;
+}
 
 .stat-number {
   font-family: var(--font-display);
@@ -438,8 +469,13 @@ ul, ol { list-style: none; }
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ---------- SECTIONS ---------- */
@@ -483,7 +519,9 @@ ul, ol { list-style: none; }
 }
 
 /* ---------- PROGRAMS ---------- */
-.programs { background: var(--dark); }
+.programs {
+  background: var(--dark);
+}
 
 .programs-grid {
   display: grid;
@@ -632,7 +670,9 @@ ul, ol { list-style: none; }
 }
 
 /* ---------- MEMBERSHIP / PRICING ---------- */
-.membership { background: var(--black); }
+.membership {
+  background: var(--black);
+}
 
 .pricing-toggle {
   display: flex;
@@ -653,7 +693,9 @@ ul, ol { list-style: none; }
   gap: 8px;
 }
 
-.toggle-label.active { color: var(--white); }
+.toggle-label.active {
+  color: var(--white);
+}
 
 .save-badge {
   background: var(--green);
@@ -677,7 +719,9 @@ ul, ol { list-style: none; }
   transition: var(--transition);
 }
 
-.toggle-switch:hover { border-color: var(--gray-500); }
+.toggle-switch:hover {
+  border-color: var(--gray-500);
+}
 
 .toggle-knob {
   position: absolute;
@@ -844,7 +888,9 @@ li.disabled .check::after {
 }
 
 /* ---------- TRAINERS ---------- */
-.trainers { background: var(--dark); }
+.trainers {
+  background: var(--dark);
+}
 
 .trainers-grid {
   display: grid;
@@ -921,7 +967,9 @@ li.disabled .check::after {
 }
 
 /* ---------- BOOKING ---------- */
-.booking { background: var(--black); }
+.booking {
+  background: var(--black);
+}
 
 .booking-wrapper {
   display: grid;
@@ -940,7 +988,7 @@ li.disabled .check::after {
   margin-bottom: 16px;
 }
 
-.booking-info > p {
+.booking-info>p {
   font-size: 1rem;
   color: var(--gray-400);
   line-height: 1.7;
@@ -1050,7 +1098,9 @@ li.disabled .check::after {
 }
 
 /* ---------- MERCH ---------- */
-.merch { background: var(--dark); }
+.merch {
+  background: var(--dark);
+}
 
 .merch-grid {
   display: grid;
@@ -1155,7 +1205,9 @@ li.disabled .check::after {
 }
 
 /* ---------- GALLERY ---------- */
-.gallery { background: var(--black); }
+.gallery {
+  background: var(--black);
+}
 
 .gallery-grid {
   display: grid;
@@ -1374,18 +1426,41 @@ li.disabled .check::after {
 
 /* ---------- ANIMATIONS ---------- */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scrollPulse {
-  0%, 100% { opacity: 1; height: 40px; }
-  50% { opacity: 0.3; height: 25px; }
+
+  0%,
+  100% {
+    opacity: 1;
+    height: 40px;
+  }
+
+  50% {
+    opacity: 0.3;
+    height: 25px;
+  }
 }
 
 /* AOS-style transitions for scroll-triggered elements */
@@ -1395,13 +1470,33 @@ li.disabled .check::after {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
-  .programs-grid { grid-template-columns: repeat(2, 1fr); }
-  .trainers-grid { grid-template-columns: repeat(2, 1fr); }
-  .merch-grid { grid-template-columns: repeat(2, 1fr); }
-  .pricing-grid { grid-template-columns: repeat(3, 1fr); }
-  .gallery-grid { grid-auto-rows: 200px; }
-  .booking-wrapper { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-auto-rows: 200px;
+  }
+
+  .booking-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1433,8 +1528,13 @@ li.disabled .check::after {
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   .nav-close {
@@ -1473,16 +1573,29 @@ li.disabled .check::after {
     color: var(--green);
   }
 
-  .nav-toggle { display: flex; }
-  .nav-actions .btn { display: none; }
+  .nav-toggle {
+    display: flex;
+  }
 
-  .programs-grid { grid-template-columns: 1fr; }
-  .trainers-grid { grid-template-columns: repeat(2, 1fr); }
-  .merch-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .merch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
     margin: 0 auto;
   }
 
@@ -1503,28 +1616,46 @@ li.disabled .check::after {
     grid-auto-rows: 180px;
   }
 
-  .gallery-item.large { grid-column: span 2; grid-row: span 1; }
-  .gallery-item.tall { grid-row: span 1; }
-  .gallery-item.wide { grid-column: span 2; }
+  .gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .gallery-item.tall {
+    grid-row: span 1;
+  }
+
+  .gallery-item.wide {
+    grid-column: span 2;
+  }
 
   .hero-stats {
     gap: 24px;
     flex-wrap: wrap;
   }
 
-  .section { padding: 80px 0; }
+  .section {
+    padding: 80px 0;
+  }
 
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 
-  .form-row { grid-template-columns: 1fr; }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-  .trainers-grid { grid-template-columns: 1fr; }
-  .merch-grid { grid-template-columns: 1fr; }
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .merch-grid {
+    grid-template-columns: 1fr;
+  }
 
   .gallery-grid {
     grid-template-columns: 1fr;
