@@ -1410,8 +1410,10 @@ li.disabled .check::after {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    min-height: -webkit-fill-available;
     background: rgba(0, 0, 0, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1421,6 +1423,8 @@ li.disabled .check::after {
     gap: 28px;
     z-index: 9999;
     padding: 80px 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .nav-links.open {
