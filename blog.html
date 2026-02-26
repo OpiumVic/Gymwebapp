@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOSH Blog &mdash; Fuel Your Mind</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.svg" alt="SOSH Fitness" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <button class="nav-close" id="navClose" aria-label="Close menu">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#membership">Membership</a></li>
+        <li><a href="index.html#trainers">Trainers</a></li>
+        <li><a href="index.html#merch">Merch</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="blog.html" class="blog-active">Blog</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="index.html#membership" class="btn btn-primary btn-sm">Join Now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== BLOG HERO ========== -->
+  <section class="blog-hero">
+    <div class="container">
+      <span class="section-tag">The SOSH Journal</span>
+      <h1 class="blog-hero-title">FUEL YOUR<br /><span class="accent">MIND.</span></h1>
+      <p class="blog-hero-sub">Training tips, nutrition guides, mindset shifts, and stories from the SOSH community. Knowledge is power &mdash; literally.</p>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED POST ========== -->
+  <section class="blog-featured">
+    <div class="container">
+      <a href="article-progressive-overload.html" class="featured-post">
+        <div class="featured-post-img">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&q=80" alt="Featured: The Science of Progressive Overload" />
+          <div class="featured-overlay"></div>
+        </div>
+        <div class="featured-post-content">
+          <div class="post-meta">
+            <span class="post-category">Training</span>
+            <span class="post-date">Feb 20, 2025</span>
+            <span class="post-read">8 min read</span>
+          </div>
+          <h2>The Science of Progressive Overload: Why Your Gains Have Stalled</h2>
+          <p>You're putting in the hours but the mirror isn't changing. Here's the brutal truth about progressive overload and the one principle that separates lifters who grow from those who plateau forever.</p>
+          <span class="read-more">Read Article <span>&rarr;</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== BLOG FILTERS ========== -->
+  <section class="blog-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Posts</button>
+        <button class="filter-btn" data-filter="training">Training</button>
+        <button class="filter-btn" data-filter="nutrition">Nutrition</button>
+        <button class="filter-btn" data-filter="mindset">Mindset</button>
+        <button class="filter-btn" data-filter="recovery">Recovery</button>
+        <button class="filter-btn" data-filter="community">Community</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG GRID ========== -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <article class="blog-card" data-category="nutrition">
+          <a href="article-meal-prep.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&q=80" alt="Meal prep guide" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Nutrition</span>
+                <span class="post-date">Feb 18, 2025</span>
+              </div>
+              <h3>The No-BS Meal Prep Guide for Busy Lifters</h3>
+              <p>Stop ordering takeout. We break down a dead-simple system to prep a full week of gains-friendly meals in under 2 hours.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="training">
+          <a href="article-compound-movements.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80" alt="Compound movements" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Training</span>
+                <span class="post-date">Feb 15, 2025</span>
+              </div>
+              <h3>5 Compound Movements You're Doing Wrong (And How to Fix Them)</h3>
+              <p>Your squat depth is lying to you. Here's a no-ego breakdown of the most common form mistakes and exactly how to correct them.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="mindset">
+          <a href="article-mental-toughness.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=500&q=80" alt="Mental toughness" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Mindset</span>
+                <span class="post-date">Feb 12, 2025</span>
+              </div>
+              <h3>Mental Toughness: How to Show Up When You Don't Feel Like It</h3>
+              <p>Motivation is a myth. Discipline is the engine. Here's how elite athletes train their minds to override every excuse.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="recovery">
+          <a href="article-recovery-stack.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="Recovery science" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Recovery</span>
+                <span class="post-date">Feb 10, 2025</span>
+              </div>
+              <h3>Sleep, Sauna, and Cold Plunge: The Recovery Stack That Actually Works</h3>
+              <p>Recovery isn't rest &mdash; it's a strategy. We break down the evidence-based recovery protocol our elite trainers swear by.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="nutrition">
+          <a href="article-protein-myths.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1622810177598-03a4bdfb5dc4?w=500&q=80" alt="Protein myths" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Nutrition</span>
+                <span class="post-date">Feb 7, 2025</span>
+              </div>
+              <h3>Protein Myths Debunked: How Much Do You Actually Need?</h3>
+              <p>One gram per pound? More? Less? We dug into the research so you can stop guessing and start growing.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="community">
+          <a href="article-member-spotlight.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&q=80" alt="SOSH community" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Community</span>
+                <span class="post-date">Feb 4, 2025</span>
+              </div>
+              <h3>Member Spotlight: How Marcus Lost 50lbs and Found His Tribe at SOSH</h3>
+              <p>From struggling with consistency to competing in his first powerlifting meet &mdash; Marcus's transformation is proof that community changes everything.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="training">
+          <a href="article-boxing-for-lifters.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=500&q=80" alt="Boxing training" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Training</span>
+                <span class="post-date">Feb 1, 2025</span>
+              </div>
+              <h3>Why Every Lifter Should Train Boxing (Even If You Never Fight)</h3>
+              <p>Cardio that doesn't suck. Coordination that transfers. Stress relief that actually works. Here's the case for hitting the bags.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="mindset">
+          <a href="article-building-systems.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&q=80" alt="Goal setting" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Mindset</span>
+                <span class="post-date">Jan 28, 2025</span>
+              </div>
+              <h3>Stop Setting Goals. Start Building Systems.</h3>
+              <p>Goals are destinations. Systems are vehicles. Learn the framework our coaches use to build habits that actually stick.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="recovery">
+          <a href="article-mobility-routine.html">
+            <div class="blog-card-img">
+              <img src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=500&q=80" alt="Stretching routine" />
+            </div>
+            <div class="blog-card-body">
+              <div class="post-meta">
+                <span class="post-category">Recovery</span>
+                <span class="post-date">Jan 25, 2025</span>
+              </div>
+              <h3>The 10-Minute Mobility Routine That Prevents 90% of Injuries</h3>
+              <p>You're skipping the warm-up and it's going to cost you. This quick daily flow keeps you bulletproof and lifting for life.</p>
+              <span class="read-more">Read More <span>&rarr;</span></span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="blog-load-more">
+        <button class="btn btn-outline btn-lg">Load More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="blog-newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">GET STRONGER<br /><span class="accent">EVERY WEEK.</span></h2>
+          <p>Join 5,000+ athletes getting weekly training tips, nutrition hacks, and mindset fuel straight to their inbox. No spam. Just gains.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="newsletter-input-wrap">
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <span class="newsletter-note">Free. Unsubscribe anytime. We respect your inbox.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.svg" alt="SOSH Fitness" class="footer-logo-img" />
+          <p class="footer-tagline">Where legends are forged.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter/X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16h-4.267z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.6C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <a href="index.html#programs">Programs</a>
+          <a href="index.html#membership">Membership</a>
+          <a href="index.html#trainers">Trainers</a>
+          <a href="index.html#merch">Merch Store</a>
+          <a href="index.html#gallery">Gallery</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="footer-links">
+          <h5>Support</h5>
+          <a href="#">FAQ</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="footer-contact">
+          <h5>Visit Us</h5>
+          <p>123 Iron Street<br />Downtown Fitness District<br />New York, NY 10001</p>
+          <p class="footer-hours"><strong>Hours:</strong> 24/7 for Elite members<br />5 AM &ndash; 11 PM for all others</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SOSH Fitness. All rights reserved. Built different.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Blog filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.blog-card').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+            setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => { card.style.display = 'none'; }, 300);
+          }
+        });
+      });
+    });
+
+    // Newsletter form
+    const nlForm = document.getElementById('newsletterForm');
+    if (nlForm) {
+      nlForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        nlForm.innerHTML = '<p style="color: var(--green); font-family: var(--font-display); font-size: 1.5rem; text-align: center;">You\'re in. Welcome to the tribe. 💪</p>';
+      });
+    }
+  </script>
+</body>
+</html>
